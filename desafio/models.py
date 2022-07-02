@@ -7,5 +7,5 @@ class Blog(models.Model):
     edad = models.IntegerField()
     fecha_creacion = models.DateField(null=True)
     
-    # def __str__(self):
-    #     return f'Tengo un blog {self.nombre}'
+    def __str__(self):
+        return f'Tengo un blog llamado {self.nombre}'
