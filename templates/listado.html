@@ -1,0 +1,36 @@
+{% comment %} {% extends 'index.html' %}
+
+{% comment %} {% block title %}
+<title>Listado</title>
+{% endblock title %}
+
+{% block texto_header %}
+<h1>
+    Listado
+</h1>
+{% endblock texto_header %}
+
+{% block despues_del_header %}
+<p>
+    <a href={% url 'crear' %}>Crear</a>
+</p>
+
+<p>
+    <form action={% url 'listado' %}>
+        {{form}}
+        <button>Buscar</button>
+    </form>
+</p>
+
+<p>
+    {% if listado %}
+    <ul>
+        {% for blog in listado %}
+        <li>{{blog}}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    No se encontraron datos.
+    {% endif %}
+</p>
+{% endblock despues_del_header %} {% endcomment %} {% endcomment %}

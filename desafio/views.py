@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from desafio.models import Familiar as flia
+from desafio.models import Blog
 from django.template import loader
 
 
@@ -9,11 +9,9 @@ from django.template import loader
 def una_vista(request):
     return HttpResponse('<h1>Proyecto</h1>')
 
-
-
 def un_template(request):
     
-    familiares = flia.objects.all() #Traer la información 
+    familiares = Blog.objects.all() #Traer la información 
     
     dicc = { "familiares" : familiares} #relacionar la info de un dicc con un html
     
@@ -26,9 +24,9 @@ def un_template(request):
 
 def crear(request):
     
-    familiar1 = flia(nombre="Lucas", phone= 123456, fecha_nacimiento= '1983-5-14')
-    familiar2 = flia(nombre="Lucas", phone= 123456, fecha_nacimiento= '1983-5-14')
-    familiar3 = flia(nombre="Lucas", phone= 123456, fecha_nacimiento= '1983-5-14')
+    familiar1 = Blog(nombre="Lucas", edad= 12, fecha_creacion= '2022-5-14')
+    familiar2 = Blog(nombre="Lucas", edad= 13, fecha_creacion= '2021-5-14')
+    familiar3 = Blog(nombre="Lucas", edad= 14, fecha_creacion= '2020-5-14')
     
     familiar1.save()
     familiar2.save()
