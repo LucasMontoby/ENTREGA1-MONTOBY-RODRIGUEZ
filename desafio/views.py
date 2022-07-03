@@ -3,7 +3,7 @@ from django.template import loader
 from django.shortcuts import redirect, render
 
 from .forms import BusquedaBlog, FormBlog
-from .models import Blog as Blog
+from .models import Blog
 from datetime import datetime
 
 # Create your views here.
@@ -25,6 +25,7 @@ def crear(request):
             blog = Blog(
                 nombre=data.get('nombre'),
                 edad=data.get('edad'),
+                fecha_creacion=fecha
                 #fecha_creacion=fecha if fecha else datetime.now()
             )
             blog.save()
