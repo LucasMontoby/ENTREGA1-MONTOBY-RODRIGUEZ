@@ -24,11 +24,13 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href={% static 'desafio/css/styles.css' %} rel="stylesheet" />
     </head>
+
+    
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href={% url 'index' %}>Index</a>
+                <a class="navbar-brand" href={% url 'base' %}>Base</a>
                 <a class="navbar-brand" href={% url 'listado' %}>Blog</a>
             </div>
         </nav>
@@ -68,6 +70,7 @@
                 </div>
             </div>
         </footer>
+        
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
