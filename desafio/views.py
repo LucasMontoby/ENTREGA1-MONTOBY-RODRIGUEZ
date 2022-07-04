@@ -13,18 +13,6 @@ def una_vista(request):
     documento = plantilla.render() #renderizar la información
     return HttpResponse(documento)
 
-# def un_template(request):
-    
-#     Blog = Blog.objects.all() #Traer la información 
-    
-#     dicc = {"blog" : Blog} #relacionar la info de un dicc con un html
-    
-#     plantilla = loader.get_template('base.html') #Cargar la plantilla del html
-
-#     documento = plantilla.render(dicc) #renderizar la información
-    
-#     return HttpResponse(documento)
-
 def crear(request):
     if request.method == 'POST':
         form = FormBlog(request.POST)
