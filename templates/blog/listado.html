@@ -26,7 +26,11 @@
     {% if listado %}
     <ul>
         {% for blog in listado %}
-        <li>{{blog}}</li>
+        <li>{{blog}} 
+            <a href={% url 'mostrar' blog.id %}>Mostrar</a>
+            <a href={% url 'editar' blog.id %}>Editar</a>
+            <a href={% url 'eliminar' blog.id %}>Eliminar</a>
+        </li>
         {% endfor %}
     </ul>
     {% else %}

@@ -9,3 +9,4 @@ class Blog(models.Model):
     
     def __str__(self):
         return f'Tengo un blog llamado {self.nombre}'
+    
